@@ -28,7 +28,7 @@
 int
 ReservedInspector::inspect(char* inputBuff, ElementRepository* pRepo, int pos){
 #ifdef _DEBUG
-	printf("%s::inspect:STAR TinputBuff(%s)\n", name, inputBuff);
+	printf("%s::inspect:START inputBuff(%s)\n", name, inputBuff);
 #endif
 	int rc = NG;
 

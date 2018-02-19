@@ -57,7 +57,7 @@ OperatorInspector::init(){
 int
 OperatorInspector::inspect(char* inputBuff, ElementRepository *pRepo, int pos){
 #ifdef _DEBUG
-	printf("%s::inspect:STARTinputBuff(%s)\n", name, inputBuff);
+	printf("%s::inspect:START inputBuff(%s)\n", name, inputBuff);
 #endif
 
 	int rc = NG;
@@ -135,7 +135,7 @@ OperatorInspector::inspect(char* inputBuff, ElementRepository *pRepo, int pos){
 int
 OperatorInspector::checkOperator(std::string& anInputStr){
 #ifdef _DEBUG
-	printf("%s::checkOperator:START an[nputStr(%s)\n", name, (char*)anInputStr.c_str());
+	printf("%s::checkOperator:START anInputStr(%s)\n", name, (char*)anInputStr.c_str());
 #endif
 
 	int rc = NG;
@@ -196,7 +196,7 @@ OperatorInspector::getTokenKind(std::string &aTokenString){
  *   dest : char*文字列の格納先
  *   src  : 変換元のString
  *  復帰値：文字列へのポインタ
- *   stlのStrjng型からCの文字列への変換
+ *   stlのString型からCの文字列への変換
 */
 inline char*
 OperatorInspector::str2char(char* dest, const std::string& src){

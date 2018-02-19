@@ -83,7 +83,7 @@ ElementRepository::init(){
 Element*
 ElementRepository::startElement(ElementClass aClass, int startPos){
 #ifdef _DEBUG
-	printf("ElementRepository二二StartEIement():Start.\n");
+	printf("ElementRepository::StartElement():Start.\n");
 #endif
 
 	int rc = NG;
@@ -127,7 +127,8 @@ ElementRepository::startElement(ElementClass aClass, int startPos){
 		pElement->validateElement(Valid);
 		pElement->setElementClass(aClass);
 		pElement->setSpanStart(startPos);
-		// torivias.push_back(pElement); 	//Toriviasに格納しようと思ってましたが、Tokenとの順序を維持するのが難しいので
+		// torivias.push_back(pElement);
+	 	// Toriviasに格納しようと思ってましたが、Tokenとの順序を維持するのが難しいので
 		// 同じtokensに格納します。
 		tokens.push_back(pElement);
 		break;
@@ -385,10 +386,10 @@ ElementRepository::printElements(ElementClass elemClass, FILE* outFp){
 }
 
 /*
- * iterateEJements:要素に繰返し処理を行う
- *  OPe:実行する処理
+ * iterateElements:要素に繰返し処理を行う
+ *  ope:実行する処理
  *  elemClass:処理する要素種。NoneEIementClassを指定した場合、すべてが処理される
- *  OutFp:出力先
+ *  outFp:出力先
  *
  *  注意：Toriviaをnodesに格納しているため、Toriviaを指定してもなにも出力されず、
  *  Nodeを指定するとToriviaも出力されます。
